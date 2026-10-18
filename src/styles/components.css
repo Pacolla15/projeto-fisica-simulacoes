@@ -1,0 +1,890 @@
+/* Layout do Cabeçalho e Navegação */
+.header {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  background-color: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(8px);
+  border-bottom: 1px solid var(--color-border);
+  box-shadow: var(--shadow-sm);
+  transition: all var(--transition-normal);
+}
+
+.header-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 4.25rem;
+}
+
+.logo-group {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  text-decoration: none !important;
+  color: var(--color-text-main);
+}
+
+.logo-icon-wrap {
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: var(--radius-md);
+  background: linear-gradient(135deg, var(--primary-600), var(--accent-teal));
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: var(--shadow-sm);
+}
+
+.logo-title {
+  font-size: 1.25rem;
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  color: var(--color-text-main);
+  display: flex;
+  align-items: center;
+  gap: 0.35rem;
+}
+
+.logo-title span {
+  color: var(--primary-600);
+}
+
+.logo-badge {
+  font-size: 0.7rem;
+  font-weight: 700;
+  color: var(--primary-700);
+  background-color: var(--primary-100);
+  padding: 0.15rem 0.5rem;
+  border-radius: var(--radius-full);
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.nav-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.5rem 0.85rem;
+  border-radius: var(--radius-md);
+  font-weight: 600;
+  font-size: 0.925rem;
+  color: var(--color-text-muted);
+  text-decoration: none !important;
+  transition: all var(--transition-fast);
+}
+
+.nav-link:hover {
+  color: var(--primary-600);
+  background-color: var(--primary-50);
+}
+
+.nav-link.active {
+  color: var(--primary-600);
+  background-color: var(--primary-100);
+}
+
+.nav-actions {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+/* Botão Modo Professor */
+.teacher-toggle-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.5rem 0.85rem;
+  border-radius: var(--radius-md);
+  font-size: 0.875rem;
+  font-weight: 600;
+  border: 1px solid var(--color-border);
+  background-color: var(--color-surface);
+  color: var(--color-text-main);
+  transition: all var(--transition-fast);
+}
+
+.teacher-toggle-btn:hover {
+  background-color: var(--color-bg);
+  border-color: var(--primary-500);
+}
+
+.teacher-toggle-btn.active {
+  background-color: #1e293b;
+  color: #ffffff;
+  border-color: #1e293b;
+}
+
+/* Banner Modo Professor Ativo */
+.teacher-banner {
+  background: linear-gradient(90deg, #1e293b, #0f172a);
+  color: #ffffff;
+  padding: 0.5rem 1rem;
+  font-size: 0.875rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 2px solid var(--primary-500);
+}
+
+.teacher-banner-text {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+/* Hero Section */
+.hero-section {
+  padding: 3.5rem 0 2.5rem;
+  background: radial-gradient(circle at 80% 20%, rgba(59, 130, 246, 0.08) 0%, transparent 60%);
+  border-bottom: 1px solid var(--color-border);
+}
+
+.hero-grid {
+  display: grid;
+  grid-template-columns: 1.2fr 0.8fr;
+  gap: 2.5rem;
+  align-items: center;
+}
+
+.hero-title {
+  font-size: 2.75rem;
+  line-height: 1.15;
+  font-weight: 800;
+  color: var(--color-text-main);
+  letter-spacing: -0.03em;
+  margin-bottom: 1rem;
+}
+
+.hero-title span {
+  background: linear-gradient(135deg, var(--primary-600), var(--accent-teal));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.hero-subtitle {
+  font-size: 1.15rem;
+  color: var(--color-text-muted);
+  margin-bottom: 1.75rem;
+  max-width: 580px;
+}
+
+.hero-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.btn-primary {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.75rem 1.5rem;
+  border-radius: var(--radius-md);
+  font-weight: 600;
+  font-size: 1rem;
+  color: #ffffff !important;
+  background-color: var(--primary-600);
+  box-shadow: 0 4px 12px rgba(37, 99, 235, 0.25);
+  transition: all var(--transition-fast);
+  text-decoration: none !important;
+}
+
+.btn-primary:hover {
+  background-color: var(--primary-700);
+  transform: translateY(-1px);
+  box-shadow: 0 6px 16px rgba(37, 99, 235, 0.35);
+}
+
+.btn-secondary {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.75rem 1.35rem;
+  border-radius: var(--radius-md);
+  font-weight: 600;
+  font-size: 1rem;
+  color: var(--color-text-main) !important;
+  background-color: var(--color-surface);
+  border: 1px solid var(--color-border);
+  box-shadow: var(--shadow-sm);
+  transition: all var(--transition-fast);
+  text-decoration: none !important;
+}
+
+.btn-secondary:hover {
+  border-color: var(--color-border-hover);
+  background-color: var(--color-bg);
+}
+
+/* Card e Grid dos Módulos */
+.section-header {
+  margin: 3rem 0 1.75rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.section-title {
+  font-size: 1.75rem;
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  color: var(--color-text-main);
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.section-desc {
+  font-size: 1rem;
+  color: var(--color-text-muted);
+}
+
+.modules-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(360px, 1fr));
+  gap: 1.5rem;
+  margin-bottom: 3.5rem;
+}
+
+.module-card {
+  background-color: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  box-shadow: var(--shadow-sm);
+  transition: all var(--transition-normal);
+  position: relative;
+  overflow: hidden;
+}
+
+.module-card:hover {
+  transform: translateY(-3px);
+  border-color: var(--primary-200);
+  box-shadow: var(--shadow-md);
+}
+
+.module-card-top {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  margin-bottom: 1rem;
+}
+
+.module-icon-box {
+  width: 3rem;
+  height: 3rem;
+  border-radius: var(--radius-md);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+}
+
+.module-card-title {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--color-text-main);
+  margin-bottom: 0.35rem;
+}
+
+.module-card-desc {
+  font-size: 0.925rem;
+  color: var(--color-text-muted);
+  margin-bottom: 1rem;
+  line-height: 1.5;
+}
+
+.module-formula-preview {
+  background-color: #f8fafc;
+  border: 1px dashed var(--color-border);
+  border-radius: var(--radius-sm);
+  padding: 0.5rem 0.75rem;
+  font-size: 0.95rem;
+  margin-bottom: 1.25rem;
+  text-align: center;
+}
+
+/* Painel de Simulação - O Coração da Plataforma */
+.sim-page-header {
+  padding: 1.5rem 0;
+  border-bottom: 1px solid var(--color-border);
+  margin-bottom: 1.5rem;
+}
+
+.sim-page-title-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.sim-page-title {
+  font-size: 1.85rem;
+  font-weight: 800;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.sim-layout {
+  display: grid;
+  grid-template-columns: 1fr 340px;
+  gap: 1.5rem;
+  align-items: start;
+}
+
+@media (max-width: 1024px) {
+  .sim-layout {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Laboratório Canvas */
+.sim-stage-card {
+  background-color: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  box-shadow: var(--shadow-sm);
+}
+
+.sim-stage-header {
+  padding: 0.75rem 1.25rem;
+  background-color: #f8fafc;
+  border-bottom: 1px solid var(--color-border);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.sim-stage-canvas-wrap {
+  position: relative;
+  background-color: #f8fafc;
+  height: 280px;
+  overflow: hidden;
+  border-bottom: 1px solid var(--color-border);
+}
+
+/* Barra de Controles da Simulação */
+.sim-controls-bar {
+  padding: 1rem 1.25rem;
+  background-color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 1rem;
+  border-bottom: 1px solid var(--color-border);
+}
+
+.sim-btn-group {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.sim-ctrl-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.55rem 1rem;
+  border-radius: var(--radius-md);
+  font-size: 0.9rem;
+  font-weight: 600;
+  border: 1px solid var(--color-border);
+  background-color: #ffffff;
+  color: var(--color-text-main);
+  transition: all var(--transition-fast);
+}
+
+.sim-ctrl-btn:hover:not(:disabled) {
+  background-color: var(--color-bg);
+  border-color: var(--primary-500);
+}
+
+.sim-ctrl-btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.sim-ctrl-btn.btn-play {
+  background-color: var(--primary-600);
+  color: #ffffff;
+  border-color: var(--primary-600);
+}
+
+.sim-ctrl-btn.btn-play:hover {
+  background-color: var(--primary-700);
+}
+
+.sim-ctrl-btn.btn-pause {
+  background-color: #f59e0b;
+  color: #ffffff;
+  border-color: #f59e0b;
+}
+
+.sim-speed-selector {
+  display: flex;
+  align-items: center;
+  background-color: #f1f5f9;
+  border-radius: var(--radius-md);
+  padding: 0.2rem;
+  border: 1px solid var(--color-border);
+}
+
+.sim-speed-btn {
+  padding: 0.3rem 0.6rem;
+  border-radius: var(--radius-sm);
+  font-size: 0.775rem;
+  font-weight: 600;
+  color: var(--color-text-muted);
+}
+
+.sim-speed-btn.active {
+  background-color: #ffffff;
+  color: var(--primary-600);
+  box-shadow: var(--shadow-sm);
+}
+
+/* Painel de Leituras em Tempo Real (Digital Gauges) */
+.readouts-panel {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
+  gap: 0.75rem;
+  padding: 1rem 1.25rem;
+  background-color: #fafbfc;
+}
+
+.readout-card {
+  background-color: #ffffff;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  padding: 0.75rem;
+  text-align: center;
+}
+
+.readout-label {
+  font-size: 0.75rem;
+  color: var(--color-text-subtle);
+  font-weight: 600;
+  text-transform: uppercase;
+  margin-bottom: 0.25rem;
+}
+
+.readout-value {
+  font-family: var(--font-mono);
+  font-size: 1.35rem;
+  font-weight: 700;
+  color: var(--color-text-main);
+}
+
+.readout-unit {
+  font-size: 0.8rem;
+  font-weight: 500;
+  color: var(--color-text-muted);
+  margin-left: 0.2rem;
+}
+
+/* Painel Lateral de Parâmetros */
+.sim-sidebar {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.sidebar-card {
+  background-color: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  padding: 1.25rem;
+  box-shadow: var(--shadow-sm);
+}
+
+.sidebar-card-title {
+  font-size: 1rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: var(--color-text-main);
+}
+
+/* Controle Numérico Duplo (Slider + Input) */
+.numeric-input-group {
+  margin-bottom: 1.25rem;
+}
+
+.numeric-input-group:last-child {
+  margin-bottom: 0;
+}
+
+.numeric-label-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 0.4rem;
+}
+
+.numeric-label {
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: var(--color-text-main);
+}
+
+.numeric-box-wrap {
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+}
+
+.numeric-box {
+  width: 5.5rem;
+  padding: 0.35rem 0.5rem;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-sm);
+  font-family: var(--font-mono);
+  font-size: 0.9rem;
+  font-weight: 600;
+  text-align: right;
+  background-color: #f8fafc;
+}
+
+.numeric-box:focus {
+  background-color: #ffffff;
+  border-color: var(--primary-600);
+}
+
+.numeric-unit-tag {
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--color-text-subtle);
+}
+
+.numeric-slider {
+  width: 100%;
+  height: 6px;
+  border-radius: var(--radius-full);
+  background: #e2e8f0;
+  outline: none;
+  cursor: pointer;
+  accent-color: var(--primary-600);
+}
+
+.slider-limits {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.725rem;
+  color: var(--color-text-subtle);
+  margin-top: 0.2rem;
+}
+
+/* Card de Fórmula Viva / KaTeX com Substituição de Variáveis */
+.live-formula-card {
+  background-color: #eff6ff;
+  border: 1px solid var(--primary-200);
+  border-radius: var(--radius-md);
+  padding: 1rem;
+  margin-top: 1rem;
+}
+
+.live-formula-title {
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: var(--primary-900);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-bottom: 0.5rem;
+  display: flex;
+  align-items: center;
+  gap: 0.35rem;
+}
+
+.live-formula-subst {
+  font-family: var(--font-mono);
+  font-size: 0.9rem;
+  color: var(--primary-900);
+  background-color: rgba(255, 255, 255, 0.7);
+  padding: 0.5rem;
+  border-radius: var(--radius-sm);
+  border-left: 3px solid var(--primary-600);
+  margin-top: 0.5rem;
+}
+
+/* Gráficos da Simulação */
+.chart-container-card {
+  background-color: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  padding: 1.25rem;
+  box-shadow: var(--shadow-sm);
+  margin-top: 1.5rem;
+}
+
+.chart-header-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 1rem;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.chart-tabs {
+  display: flex;
+  align-items: center;
+  background-color: #f1f5f9;
+  border-radius: var(--radius-md);
+  padding: 0.25rem;
+}
+
+.chart-tab-btn {
+  padding: 0.4rem 0.85rem;
+  border-radius: var(--radius-sm);
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--color-text-muted);
+}
+
+.chart-tab-btn.active {
+  background-color: #ffffff;
+  color: var(--primary-600);
+  box-shadow: var(--shadow-sm);
+}
+
+.chart-explanation-box {
+  background-color: #f8fafc;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  padding: 0.75rem 1rem;
+  margin-top: 1rem;
+  font-size: 0.875rem;
+  color: var(--color-text-muted);
+}
+
+/* Painel Pedagógico: Aprendizagem Guiada (Modo Aluno) */
+.pedagogy-section {
+  margin-top: 2rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
+}
+
+@media (max-width: 900px) {
+  .pedagogy-section {
+    grid-template-columns: 1fr;
+  }
+}
+
+.pedagogy-card {
+  background-color: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  padding: 1.5rem;
+  box-shadow: var(--shadow-sm);
+}
+
+.pedagogy-card-title {
+  font-size: 1.15rem;
+  font-weight: 700;
+  margin-bottom: 0.85rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+/* Área de Exercícios */
+.exercise-card {
+  background-color: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  padding: 1.75rem;
+  box-shadow: var(--shadow-sm);
+  margin-bottom: 1.5rem;
+}
+
+.exercise-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  margin-bottom: 1rem;
+}
+
+.exercise-title {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--color-text-main);
+}
+
+.exercise-question {
+  font-size: 1.05rem;
+  line-height: 1.6;
+  color: var(--color-text-main);
+  margin-bottom: 1.25rem;
+}
+
+.exercise-options {
+  display: flex;
+  flex-direction: column;
+  gap: 0.65rem;
+  margin-bottom: 1.25rem;
+}
+
+.exercise-option-btn {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.85rem 1rem;
+  border-radius: var(--radius-md);
+  border: 1px solid var(--color-border);
+  background-color: #f8fafc;
+  text-align: left;
+  font-size: 0.95rem;
+  color: var(--color-text-main);
+  transition: all var(--transition-fast);
+}
+
+.exercise-option-btn:hover:not(:disabled) {
+  border-color: var(--primary-500);
+  background-color: #ffffff;
+}
+
+.exercise-option-btn.selected {
+  border-color: var(--primary-600);
+  background-color: var(--primary-50);
+  font-weight: 600;
+}
+
+.exercise-feedback-box {
+  border-radius: var(--radius-md);
+  padding: 1rem 1.25rem;
+  margin-top: 1rem;
+}
+
+.feedback-success {
+  background-color: #ecfdf5;
+  border: 1px solid #a7f3d0;
+  color: #065f46;
+}
+
+.feedback-error {
+  background-color: #fef2f2;
+  border: 1px solid #fecaca;
+  color: #991b1b;
+}
+
+/* Rodapé */
+.footer {
+  background-color: #ffffff;
+  border-top: 1px solid var(--color-border);
+  padding: 3rem 0 2rem;
+  margin-top: 4rem;
+}
+
+.footer-grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr;
+  gap: 2.5rem;
+  margin-bottom: 2.5rem;
+}
+
+@media (max-width: 768px) {
+  .hero-grid {
+    grid-template-columns: 1fr;
+  }
+  .footer-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ============================================================== */
+/* ESTILIZAÇÃO DO CONTEÚDO DIDÁTICO DA TEORIA                     */
+/* ============================================================== */
+.theory-rich-content {
+  font-size: 1.05rem;
+  line-height: 1.85;
+  color: var(--color-text-main);
+}
+
+.theory-paragraph {
+  margin-bottom: 1.2rem;
+  color: var(--color-text-main);
+}
+
+.theory-paragraph strong {
+  color: var(--color-text-main);
+  font-weight: 700;
+}
+
+.theory-subheading {
+  font-size: 1.3rem;
+  font-weight: 800;
+  color: var(--primary-900);
+  margin-top: 2rem;
+  margin-bottom: 0.85rem;
+  padding-bottom: 0.4rem;
+  border-bottom: 2px solid var(--primary-100);
+}
+
+.theory-list {
+  margin: 0.75rem 0 1.25rem 1.5rem;
+  padding-left: 0.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  list-style-type: disc;
+}
+
+.theory-list > li {
+  line-height: 1.75;
+  color: var(--color-text-main);
+}
+
+.theory-sublist {
+  margin: 0.4rem 0 0.5rem 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+  list-style-type: circle;
+  color: var(--color-text-muted);
+}
+
+.theory-ordered-list {
+  margin: 0.75rem 0 1.25rem 1.5rem;
+  padding-left: 0.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.theory-ordered-list > li {
+  line-height: 1.75;
+  color: var(--color-text-main);
+}
+
+.math-display {
+  padding: 1rem 1.25rem;
+  background: linear-gradient(180deg, #f8fafc 0%, #f1f5f9 100%);
+  border: 1px solid #cbd5e1;
+  border-radius: var(--radius-md);
+  margin: 1.25rem 0;
+  overflow-x: auto;
+  text-align: center;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04);
+}
+
+.math-display .katex-display {
+  margin: 0.25rem 0;
+}
+
